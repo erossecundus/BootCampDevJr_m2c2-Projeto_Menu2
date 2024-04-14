@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="css/quantity.css" />
 </head>
 
-<body>
+<body class="bg-body-secondary">
 
   <!--NavBar-->
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary  ">
     <div class="container-fluid">
       <img src="assets/logo.png" width="40" alt="logo" class="me-2">
       <a class="navbar-brand me-4" href="#">Restaurante BootCamp-DevJr</a>
@@ -45,10 +45,11 @@
     </div>
   </nav>
 
-  <div class="container col-lg-8 shadow-lg rounded-4 p-3 mt-3">
+  <!--Conteúdo-->
+  <div class="container col-lg-8 bg-light-subtle shadow-lg rounded-3 p-3 my-3 text-center">
 
     <!--Caroussel-->
-    <div class="container mt-1 d-none d-lg-block">
+    <div class="row d-none d-lg-block">
       <div id="carouselExampleCaptions" class="carousel slide">
 
         <div class="carousel-indicators">
@@ -98,6 +99,140 @@
       </div>
 
     </div>
+
+    <!--Title and Subtitle - Menu-->
+    <div class="row my-2">
+      <div class="col">
+        <div class="display-1">
+          Menu
+        </div>
+        <p class="fs-5">- Faça a sua escolha -</p>
+      </div>
+    </div>
+
+    <!--Bloco 1 - Pratos Principais-->
+    <div class="row bg-body-secondary shadow rounded-3 p-2 mx-auto mb-4 justify-content-center">
+
+      <!--Title and Subtitle Prato Principal-->
+      <div class="row">
+        <div class="col">
+          <h2>Prato Principal</h2>
+          <p>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p>
+        </div>
+      </div>
+
+      <!--Cards 1 - Pratos Principais-->
+      <div class="row justify-content-around m-auto gap-4">
+
+        <div class="card shadow bg-body-tertiary border-0 p-2 mb-3" style="width: 18rem;">
+          <img src="assets/bife.jpg" class="card-img-top" alt="bife com batata">
+          <div class="card-body">
+            <h5 class="card-title">Bife com batata</h5>
+            <p class="fs-3 fw-medium text-success">R$ 30,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow bg-body-tertiary border-light p-2 mb-3" style="width: 18rem;">
+          <img src="assets/coxa.jpg" class="card-img-top" alt="coxa de frango">
+          <div class="card-body">
+            <h5 class="card-title">Coxa de frango crocante</h5>
+            <p class="fs-3 fw-medium text-success">R$ 25,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow bg-body-tertiary border-light p-2 mb-3" style="width: 18rem;">
+          <img src="assets/panela.jpg" class="card-img-top" alt="carne de panela">
+          <div class="card-body">
+            <h5 class="card-title">Carne de panela</h5>
+            <p class="fs-3 fw-medium text-success">R$ 22,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--Bloco 2 - Acompanhamento-->
+    <div class="row bg-body-secondary shadow rounded-3 p-2 mx-auto my-3 justify-content-center">
+
+      <!--Title and Subtitle Acompanhamento-->
+      <div class="row">
+        <div class="col">
+          <h2>Acompanhamentos</h2>
+          <p>Porções para uma pessoa.</p>
+        </div>
+      </div>
+
+      <!--Cards 2 - Acompanhamento-->
+      <div class="row justify-content-around m-auto gap-4">
+
+        <div class="card shadow bg-body-tertiary border-light p-2 mb-3" style="width: 18rem;">
+          <img src="assets/farofa.jpg" class="card-img-top" alt="farofa">
+          <div class="card-body">
+            <h5 class="card-title">Farofa</h5>
+            <p class="fs-3 fw-medium text-success">R$ 10,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow bg-body-tertiary border-light p-2 mb-3" style="width: 18rem;">
+          <img src="assets/salad.jpg" class="card-img-top" alt="salada">
+          <div class="card-body">
+            <h5 class="card-title">Salada</h5>
+            <p class="fs-3 fw-medium text-success">R$ 8,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow bg-body-tertiary border-light p-2 mb-3" style="width: 18rem;">
+          <img src="assets/torresmo.jpg" class="card-img-top" alt="torresmo">
+          <div class="card-body">
+            <h5 class="card-title">Torresmo</h5>
+            <p class="fs-3 fw-medium text-success">R$ 12,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+
+
 
 
 

@@ -3,7 +3,7 @@
 .quantity {
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
     
 }
 
@@ -33,10 +33,11 @@
 .quantity.buttons_added .minus,
 .quantity.buttons_added .plus {
     padding: 7px 10px 8px;
-    height: 41px;
+    height: 39px;
     background-color: #ffffff;
     border: 1px solid #efefef;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .quantity.buttons_added .minus {

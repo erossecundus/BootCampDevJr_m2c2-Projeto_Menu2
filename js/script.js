@@ -22,27 +22,31 @@ function calc() {
         currency: 'BRL',
     });
 
-    
+    outputName.innerHTML = `<h3>Caro <strong>${clientName.value}</strong></h3>`;    //aplicando nome no titulo do modal
 
-    outputName.innerHTML = `<h3>Caro <strong>${clientName.value}</strong></h3>`;
-    output.innerHTML = '';
-    output.innerHTML += `<p>Seguem os dados do seu pedido.</p>Seu pedido é:<ol>`
+    output.innerHTML = `<p>Seguem os dados do seu pedido.</p>
+                        Seu pedido é:<ul class="list-group">`;
     
     for (var input of quantities) {
         if (parseFloat(input.value)){
-            output.innerHTML += `<li class="fs-5">Prato: ${prod[input.id-1].name}</li>
-                                <ul>
-                                <li>Preço unitário: ${formatter.format(prod[input.id-1].price)} | 
-                                    Quant.: ${input.value} | Total parcial: 
-                                    <strong>${formatter.format(parseFloat(input.value) * prod[input.id-1].price)}</strong></li>
-                                </ul>`;
+            output.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Prato: ${prod[input.id-1].name}</div>
+                                        Preço unitário: ${formatter.format(prod[input.id-1].price)} | 
+                                        Quant.: ${input.value} | Total parcial:
+                                        <spam class="fw-bold">${formatter.format(parseFloat(input.value) * prod[input.id-1].price)}
+                                        </spam>
+                                    </div>
+                                </li>`;
+                                
             total            += parseFloat(input.value)*prod[input.id-1].price;
         }
     }
-    output.innerHTML += "</ol>" ;
-    if(clientMsg.value)
+    output.innerHTML += `</ul>`;
+
+    if(clientMsg.value)     //acrescentando as observações no modal, caso existam
         output.innerHTML += `<p class="fst-italic">Observações: ${clientMsg.value}</p>`;
-    output.innerHTML += `<h2 class="text-center">Preço final: ${formatter.format(total)}</h2>`;
+    output.innerHTML += `<h3 class="text-center"><br>Preço final: ${formatter.format(total)}</h3>`;
     
 
 }
